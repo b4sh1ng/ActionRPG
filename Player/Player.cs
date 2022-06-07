@@ -29,9 +29,8 @@ public class Player : KinematicBody2D
 
         input_vector.x = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
         input_vector.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
-		
-        input_vector = input_vector.Normalized() * SPEED;
 
+        input_vector = input_vector.Normalized() * SPEED;
         if (input_vector != Vector2.Zero)
         {
             animationTree.Set("parameters/Idle/blend_position", input_vector);

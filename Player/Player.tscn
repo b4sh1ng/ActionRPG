@@ -174,11 +174,13 @@ animation = "IdleUp"
 blend_point_0/node = SubResource( 11 )
 blend_point_0/pos = Vector2( -1, 0 )
 blend_point_1/node = SubResource( 12 )
-blend_point_1/pos = Vector2( 0, 1 )
+blend_point_1/pos = Vector2( 0, 1.1 )
 blend_point_2/node = SubResource( 13 )
 blend_point_2/pos = Vector2( 1, 0 )
 blend_point_3/node = SubResource( 14 )
-blend_point_3/pos = Vector2( 0, -1 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id=18]
@@ -197,11 +199,13 @@ animation = "RunUp"
 blend_point_0/node = SubResource( 18 )
 blend_point_0/pos = Vector2( -1, 0 )
 blend_point_1/node = SubResource( 19 )
-blend_point_1/pos = Vector2( 0, 1 )
+blend_point_1/pos = Vector2( 0, 1.1 )
 blend_point_2/node = SubResource( 20 )
 blend_point_2/pos = Vector2( 1, 0 )
 blend_point_3/node = SubResource( 21 )
-blend_point_3/pos = Vector2( 0, -1 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
@@ -223,6 +227,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
